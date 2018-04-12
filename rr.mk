@@ -5,9 +5,6 @@ TARGET_SCREEN_WIDTH := 1440
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/google/taimen/aosp_taimen.mk)
-
 -include device/google/wahoo/device-lineage.mk
 
 ## Device identifier. This must come after all inclusions
