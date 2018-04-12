@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 
 $(call inherit-product, device/google/taimen/device.mk)
-$(call inherit-product-if-exists, vendor/google/taimen/taimen-vendor.mk)
+$(call inherit-product, device/google/taimen/rr.mk)
 
 PRODUCT_PACKAGES += \
     Dialer \
@@ -34,9 +34,3 @@ PRODUCT_COPY_FILES += \
     device/google/taimen/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
-
-PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
-PRODUCT_NAME := aosp_taimen
-PRODUCT_DEVICE := taimen
-PRODUCT_MODEL := AOSP on taimen
